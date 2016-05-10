@@ -1,0 +1,60 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.presenter.welcome;
+
+import org.akab.engine.client.core.mvp.presenter.BasePresenter;
+
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.RootPanel;
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome.WelcomePanelView;
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome.WelcomePanelViewImpl;
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.controller.welcome.WelcomeController;
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.request.welcome.SayHelloServerRequest;
+
+import org.akab.engine.client.core.mvp.Presenter;
+
+@Presenter(controllerClass = WelcomeController.class)
+public class WelcomePresenter extends BasePresenter<WelcomePanelView> {
+
+    @Override
+    protected WelcomePanelView createViewInstance() {
+		return new WelcomePanelViewImpl();
+    }
+
+    @Override
+    protected void initialize(final WelcomePanelView view) {
+	
+    	view.getSubmitButton().addClickHandler(new ClickHandler() {
+			
+			@Override
+			public void onClick(ClickEvent event) {
+				
+				SayHelloServerRequest sayHelloServerRequest=new SayHelloServerRequest();
+				sayHelloServerRequest.getArgs().setName(view.getNameField().getText());
+				sayHelloServerRequest.send();
+				
+			}
+		});
+    	
+    }
+    
+    @Override
+    public String getDescription() {
+		return "Welcome presenter";
+    }
+    
+
+    @Override
+    protected void regesterExtensionPoints() {
+		registerExtensionPoint(new WelcomeExtensionPoint(getView()));
+    }
+    
+    public void showNameInputDialog(){
+    	RootPanel.get().add(getView().get());
+    }
+
+	public void sayHello(String welcomeMessage) {
+		Window.alert(welcomeMessage);
+	}
+    
+}

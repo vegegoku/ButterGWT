@@ -1,0 +1,14 @@
+package ${PACKAGE}.shared.api.request;
+
+import org.akab.engine.core.shared.api.request.RequestArgs;
+
+public class ${REQUEST_NAME} extends RequestArgs {
+    
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+    public ${REQUEST_NAME}() {
+    }
+}

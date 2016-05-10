@@ -1,0 +1,25 @@
+package ${PACKAGE}.client.impl;
+
+import java.util.logging.Logger;
+
+import com.google.gwt.core.client.EntryPoint;
+
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.impl.resources.${NAME}Bundle;
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class ${NAME} implements EntryPoint {
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+
+
+	/**
+	 * This is the entry point method.
+	 */
+	public void onModuleLoad() {
+		${NAME}Bundle.INSTANCE.style().ensureInjected();
+	}
+}

@@ -1,0 +1,25 @@
+package ${BASE_PACKAGE}.shared.${SUB_PACKAGE}.request.welcome;
+
+import org.akab.engine.model.shared.request.RequestArgs;
+
+public class SayHelloRequestArgs extends RequestArgs {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1L;
+	
+	private String name;
+
+	public SayHelloRequestArgs() {
+    }
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

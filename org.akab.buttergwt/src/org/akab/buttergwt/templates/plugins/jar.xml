@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="JFW" default="plugin-jar" basedir=".">
+	<target name="plugin-jar">
+		<jar destfile="output/${PLUGIN_MODULE}_1.0.0.jar" manifest="META-INF/MANIFEST.MF">
+			<fileset dir="WebContent/WEB-INF/classes" />
+			<fileset dir="src">
+				<include name="**/*.java"/>
+				<exclude name="**/server/**"/>
+			</fileset>
+		</jar>
+	</target>
+
+</project>

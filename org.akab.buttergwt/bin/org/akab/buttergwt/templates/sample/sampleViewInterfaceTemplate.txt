@@ -1,0 +1,14 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome;
+
+import org.akab.engine.client.core.mvp.view.View;
+
+import com.google.gwt.event.dom.client.HasClickHandlers;
+import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.VerticalPanel;
+
+public interface WelcomePanelView extends View<VerticalPanel>{
+	
+	public HasText getNameField();
+	public HasClickHandlers getSubmitButton();
+
+}

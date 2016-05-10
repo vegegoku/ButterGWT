@@ -1,0 +1,7 @@
+package ${PACKAGE}.client.api.context;
+
+import org.akab.engine.core.client.api.contribution.ContributionContext;
+
+public interface ${NAME}ContributionContext extends ContributionContext {
+    
+}

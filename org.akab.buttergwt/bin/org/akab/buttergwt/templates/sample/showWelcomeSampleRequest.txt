@@ -1,0 +1,29 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.request.welcome;
+
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.presenter.welcome.WelcomePresenter;
+import org.akab.engine.client.core.mvp.presenter.Presenter;
+import org.akab.engine.client.core.request.BaseRequest;
+import org.akab.engine.client.core.mvp.Request;
+import org.akab.engine.client.core.request.EmptyClientRequest;
+import org.akab.engine.client.core.request.handler.ClientHandler;
+import org.akab.engine.model.shared.request.EmptyRequestArgs;
+
+@Request(presenterClass=WelcomePresenter.class)
+public class ShowNameInputEmptyClientRequest extends EmptyClientRequest {
+
+    public ShowNameInputEmptyClientRequest() {
+		super(new ClientHandler<EmptyRequestArgs>() {
+
+	    	@SuppressWarnings("rawtypes")
+	    	@Override
+	    	public void handleRequest(BaseRequest<EmptyRequestArgs> request, Presenter presenter) {
+		
+				// TODO Auto-generated method stub
+				WelcomePresenter welcomePresenter=(WelcomePresenter)presenter;
+				welcomePresenter.showNameInputDialog();
+		
+	    	}
+		});
+    }
+}
+

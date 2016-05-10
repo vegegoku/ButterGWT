@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/ant-launcher.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang3-3.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gwt-dev.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javapoet-1.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.akab.engine.core-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

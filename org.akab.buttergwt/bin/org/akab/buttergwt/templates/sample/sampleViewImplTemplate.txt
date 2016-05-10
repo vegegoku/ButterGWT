@@ -1,0 +1,45 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome;
+
+import com.google.gwt.event.dom.client.HasClickHandlers;
+import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.widget.client.TextButton;
+
+public class WelcomePanelViewImpl implements WelcomePanelView {
+
+	private VerticalPanel verticalPanel = new VerticalPanel();
+	private TextBox textBox = new TextBox();
+	private TextButton submitButton = new TextButton("Submit");
+
+	public WelcomePanelViewImpl() {
+		verticalPanel.add(textBox);
+		verticalPanel.add(submitButton);
+	}
+
+	@Override
+	public VerticalPanel get() {
+		return verticalPanel;
+	}
+
+	@Override
+	public void show() {
+		verticalPanel.setVisible(true);
+	}
+
+	@Override
+	public void hide() {
+		verticalPanel.setVisible(false);
+	}
+
+	@Override
+	public HasText getNameField() {
+		return textBox;
+	}
+
+	@Override
+	public HasClickHandlers getSubmitButton() {
+		return submitButton;
+	}
+
+}

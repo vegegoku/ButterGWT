@@ -1,0 +1,28 @@
+package ${PACKAGE}.client.api.extension;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.client.api.contribution.ExtensionPoint;
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.api.context.${NAME}ContributionContext;
+
+public class ${NAME}ExtensionPoint implements ExtensionPoint<${NAME}ContributionContext> {
+
+	private ${NAME}ContributionContext contributionContext;
+	
+	public ${NAME}ExtensionPoint(${NAME}ContributionContext context) {
+		this.contributionContext=context;
+	}
+	
+	@Override
+	public ${NAME}ContributionContext getContext() {
+		return contributionContext;
+	}
+	
+    public String getDescription() {
+		return "${NAME} Extension point";
+    }
+
+}
+

@@ -1,0 +1,18 @@
+package ${PACKAGE}.client.impl.request;
+
+import org.akab.engine.core.client.api.request.EmptyServerRequest;
+import org.akab.engine.core.client.api.request.Request;
+import org.akab.engine.core.client.api.request.handler.ServerResponseHandler;
+import org.akab.engine.core.shared.api.request.EmptyRequestArgs;
+
+import ${RESPONSE_IMPORT};
+import ${PRESENTER_IMPORT};
+
+@Request(presenterClass=${PRESENTER_NAME}.class)
+public class ${NAME}ServerRequest extends EmptyServerRequest<${RESPONSE_NAME}, ${PRESENTER_NAME}> {
+
+    public ${NAME}ServerRequest() {
+		super(new ${NAME}ServerResponseHandler());
+    }
+
+}

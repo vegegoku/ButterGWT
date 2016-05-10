@@ -1,0 +1,23 @@
+package ${PACKAGE}.server.impl;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+
+public class Activator implements BundleActivator {
+	
+	private Logger LOGGER =CoreLoggerfactory.createLogger();
+
+	@Override
+	public void start(BundleContext context) throws Exception {
+		LOGGER.info("${NAME} bundle started :-)");
+	}
+
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		LOGGER.info("${NAME} bundle stopped. :-(");
+	}
+
+}

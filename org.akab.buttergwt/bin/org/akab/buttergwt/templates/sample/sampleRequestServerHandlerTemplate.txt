@@ -1,0 +1,24 @@
+package ${BASE_PACKAGE}.server.${SUB_PACKAGE}.request.handler.welcome;
+
+
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.request.welcome.SayHelloServerRequest;
+import org.akab.engine.server.core.request.AppServerRequestArgs;
+import org.akab.engine.server.core.request.ServerRequestHandler;
+import org.akab.engine.server.core.request.RequestHandler;
+import ${BASE_PACKAGE}.shared.${SUB_PACKAGE}.request.welcome.SayHelloRequestArgs;
+import ${BASE_PACKAGE}.shared.${SUB_PACKAGE}.response.welcome.SayHelloResponse;
+
+@RequestHandler(request=SayHelloServerRequest.class)
+public class SayHelloServerHanlder extends ServerRequestHandler<SayHelloRequestArgs, SayHelloResponse> {
+
+    @Override
+    public SayHelloResponse handleRequest(AppServerRequestArgs<SayHelloRequestArgs> request) throws Exception {
+    	
+    	SayHelloResponse response=new SayHelloResponse();
+		
+		response.setWelcomeMessage("Welcome "+request.getRequestArgs().getName());
+		
+		return response;
+    }
+
+}

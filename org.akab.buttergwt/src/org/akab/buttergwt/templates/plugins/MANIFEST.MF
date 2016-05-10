@@ -1,0 +1,5 @@
+Manifest-Version: 2.0
+Bundle-ManifestVersion: 2
+Created-By: bo3
+Bundle-SymbolicName: ${NAME}
+Bundle-Version: 1.0.0

@@ -1,0 +1,10 @@
+package ${PACKAGE}.client.api.mvp.view;
+
+import org.akab.engine.core.client.api.mvp.view.WidgetView;
+
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+
+public interface ${NAME}View extends WidgetView<HTMLPanel, RootPanel>{
+
+}

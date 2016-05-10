@@ -1,0 +1,28 @@
+package ${PACKAGE}.client.impl.contribution;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.client.api.contribution.Contribute;
+import org.akab.engine.core.client.api.contribution.Contribution;
+
+import ${CONTRIBUTION_CONTEXT_IMPORT};
+import ${EXTENSION_POINT_IMPORT};
+
+@Contribute(extensionPoint=${EXTENSION_POINT_NAME}.class)
+public class ${NAME}Contribution implements Contribution<${EXTENSION_POINT_NAME}> {
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+
+    @Override
+    public void contribute(${EXTENSION_POINT_NAME} extensionPoint) {
+    	
+    	${CONTRIBUTION_CONTEXT_NAME} context=extensionPoint.getContext();
+    	// TODO start contributing here
+    }
+
+    @Override
+    public String getDescription() {
+		return "${CONTRIBUTION_DESCRIPTION}";
+    }
+
+}

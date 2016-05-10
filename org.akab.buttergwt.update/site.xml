@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.akab.buttergwt.feature_1.0.2.jar" id="org.akab.buttergwt.feature" version="1.0.2">
+      <category name="org.akab.buttergwt.category"/>
+   </feature>
+   <category-def name="org.akab.buttergwt.category" label="New Category 4"/>
+</site>

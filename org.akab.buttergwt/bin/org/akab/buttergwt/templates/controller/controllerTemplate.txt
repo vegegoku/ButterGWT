@@ -1,0 +1,42 @@
+package ${PACKAGE}.client.impl.mvp.controller;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.client.api.event.ControllerEventInitializer;
+import org.akab.engine.core.client.api.mvp.Controller;
+import org.akab.engine.core.client.api.mvp.controller.HistoryBaseController
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.impl.events.${NAME}ControllerEvent;
+import ${PACKAGE}.client.impl.events.Events;
+
+
+@Controller${PRIORITY}
+public class ${NAME}Controller extends HistoryBaseController<${NAME}ControllerEvent> {
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+    
+
+    public ${NAME}Controller() {
+		super(Events.${NAME_CONSTANT}_CONTROLLER_EVENT_TYPE);
+    }
+    
+    @Override
+    public ControllerEventInitializer<${NAME}ControllerEvent> getNewControllerEventInitializerInstance() {
+		return new ControllerEventInitializer<${NAME}ControllerEvent>(new ${NAME}ControllerEvent());
+    }
+
+    @Override
+    public String getDescription() {
+		return "[Controller] ${DESCRIPTION}";
+    }
+ 
+
+    @Override
+    public void onApplicationStarted() {
+    	// TODO Auto-generated method stub
+    	
+    
+    }
+
+}

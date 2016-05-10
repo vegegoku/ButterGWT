@@ -1,0 +1,9 @@
+package ${PACKAGE}.client.impl.events;
+
+import org.akab.engine.core.client.api.handler.ControllerEventHandler;
+import com.google.gwt.event.shared.GwtEvent.Type;
+
+@SuppressWarnings("rawtypes")
+public class Events {
+    public static final Type<ControllerEventHandler> ${NAME_CONSTANT}_CONTROLLER_EVENT_TYPE = new Type<ControllerEventHandler>();
+}

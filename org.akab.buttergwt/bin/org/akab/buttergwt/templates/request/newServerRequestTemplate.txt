@@ -1,0 +1,19 @@
+package ${PACKAGE}.client.impl.request;
+
+import org.akab.engine.core.client.api.request.Request;
+import org.akab.engine.core.client.api.request.ServerRequest;
+
+import ${PRESENTER_IMPORT};
+import ${PRESENTER_CLASS_IMPORT};
+import ${REQUEST_IMPORT};
+import ${RESPONSE_IMPORT};
+
+@Request(presenterClass=${PRESENTER_CLASS_NAME}.class)
+public class ${NAME}ServerRequest extends ServerRequest<${REQUEST_NAME}, ${RESPONSE_NAME}, ${PRESENTER_NAME}> {
+
+    public ${NAME}ServerRequest() {
+		super(new ${NAME}ServerResponseHandler(), new ${REQUEST_NAME}());
+    }
+
+}
+

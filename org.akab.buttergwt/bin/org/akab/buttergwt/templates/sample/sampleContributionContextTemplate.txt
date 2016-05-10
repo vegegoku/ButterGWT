@@ -1,0 +1,18 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.presenter.welcome;
+
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome.WelcomePanelView;
+import org.akab.engine.client.core.contribution.ContributionContext;
+
+public class WelcomeContributionContext implements ContributionContext {
+    
+    private WelcomePanelView view;
+
+    public WelcomeContributionContext(WelcomePanelView view) {
+		this.view=view;
+    }
+    
+    public WelcomePanelView getView(){
+		return view;
+    }
+    
+}

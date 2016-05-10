@@ -1,0 +1,8 @@
+package ${PACKAGE}.client.api.mvp.presenter;
+
+import org.akab.engine.core.client.api.mvp.presenter.ViewPresenter;
+
+public interface ${NAME}ViewPresenter extends ViewPresenter {
+	
+
+}

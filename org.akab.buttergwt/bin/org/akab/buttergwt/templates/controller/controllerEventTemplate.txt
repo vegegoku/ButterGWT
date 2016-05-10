@@ -1,0 +1,26 @@
+package ${PACKAGE}.client.impl.events;
+
+import org.akab.engine.core.client.api.event.ControllerEvent;
+import org.akab.engine.core.client.api.handler.ControllerEventHandler;
+
+import com.google.gwt.event.shared.GwtEvent;
+
+public class ${NAME}ControllerEvent extends ControllerEvent {
+
+    public ${NAME}ControllerEvent() {
+		super();
+    }
+
+    @SuppressWarnings("rawtypes")
+    @Override
+    public final GwtEvent.Type<ControllerEventHandler> getAssociatedType() {
+		return Events.${NAME_CONSTANT}_CONTROLLER_EVENT_TYPE;
+    }
+    
+    @SuppressWarnings("unchecked")
+    @Override
+    public ${NAME}ControllerEvent getNewInstance() {
+		return new ${NAME}ControllerEvent();
+    }
+
+}

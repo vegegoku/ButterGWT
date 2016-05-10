@@ -1,0 +1,57 @@
+package ${PACKAGE}.client.impl.mvp.view;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.RootPanel;
+
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.api.mvp.view.${NAME}View;
+
+public class ${NAME} extends Composite implements ${NAME}View {
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+	
+	private static ${NAME}UiBinder uiBinder = GWT.create(${NAME}UiBinder.class);
+	
+	interface ${NAME}UiBinder extends UiBinder<HTMLPanel, ${NAME}> {
+	}
+	
+	
+	HTMLPanel root;
+	
+	
+	protected ${NAME}() {
+		root=uiBinder.createAndBindUi(this);
+		initWidget(root);
+		LOGGER.log(Level.FINE, "${NAME} view have been initialized successfully.");
+	}
+
+    @Override
+    public HTMLPanel get() {
+    	// TODO Auto-generated method stub
+		return root;
+    }
+
+    @Override
+    public void show(RootPanel parent) {
+    	// TODO Auto-generated method stub
+		RootPanel.get().add(this);
+    }
+
+    @Override
+    public void hide() {
+    	// TODO Auto-generated method stub
+		get().removeFromParent();
+    }
+    
+    public static ${NAME}View create(){
+    	return new ${NAME}();
+    }
+
+}

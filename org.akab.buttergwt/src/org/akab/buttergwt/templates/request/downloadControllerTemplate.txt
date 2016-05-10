@@ -1,0 +1,37 @@
+package ${PACKAGE}.server.impl.request.download;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.akab.engine.core.server.api.servlet.controller.download.BaseDownloadRequestController;
+import org.akab.engine.core.server.api.servlet.controller.download.DownloadRequestController;
+import org.akab.engine.core.shared.api.Constants;
+
+import org.apache.aries.blueprint.annotation.Bean;
+import org.apache.aries.blueprint.annotation.Service;
+import org.apache.aries.blueprint.annotation.ServiceProperty;
+
+import ${REQUEST_IMPORT};
+import ${RESPONSE_IMPORT};
+
+@Bean(id = "${PACKAGE}.server.impl.request.download.${NAME}DownloadController")
+@Service(interfaces = DownloadRequestController.class, serviceProperties = {
+		@ServiceProperty(key = Constants.REQUEST_KEY, value =  "${PACKAGE}.client.impl.request.${NAME}ServerRequest"),
+		@ServiceProperty(key = Constants.REQUEST_PATH, value = "${PATH}") })
+public class ${NAME}DownloadController extends BaseDownloadRequestController<${REQUEST_NAME}, ${RESPONSE_NAME}> {
+
+	@Override
+	public ${REQUEST_NAME} getDownloadRequestArgs(HttpServletRequest httpRequest, Map<String, String> parametersMap) {
+		${REQUEST_NAME} args = new ${REQUEST_NAME}();
+		// TODO initialize the request arguments
+		return args;
+	}
+
+	@Override
+	public void writeResponse(HttpServletResponse httpResponse, ${REQUEST_NAME} request, ${RESPONSE_NAME} response){
+		// TODO Auto-generated method stub
+	}
+
+}

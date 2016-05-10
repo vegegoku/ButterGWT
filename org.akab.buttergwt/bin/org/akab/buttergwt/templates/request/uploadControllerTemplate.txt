@@ -1,0 +1,38 @@
+package ${PACKAGE}.server.impl.request.upload;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.akab.engine.core.server.api.servlet.controller.upload.BaseUploadRequestController;
+import org.akab.engine.core.server.api.servlet.controller.upload.UploadRequestController;
+import org.akab.engine.core.shared.api.Constants;
+
+import org.apache.aries.blueprint.annotation.Bean;
+import org.apache.aries.blueprint.annotation.Service;
+import org.apache.aries.blueprint.annotation.ServiceProperty;
+import org.apache.commons.fileupload.FileItem;
+
+import ${REQUEST_IMPORT};
+import ${RESPONSE_IMPORT};
+
+@Bean(id = "${PACKAGE}.server.impl.upload.${NAME}UploadController")
+@Service(interfaces = UploadRequestController.class, serviceProperties = {
+		@ServiceProperty(key = Constants.REQUEST_KEY, value =  "${PACKAGE}.client.impl.request.${NAME}ServerRequest"),
+		@ServiceProperty(key = Constants.REQUEST_PATH, value = "${PATH}") })
+public class ${NAME}UploadController extends BaseUploadRequestController<${REQUEST_NAME}, ${RESPONSE_NAME}> {
+
+	@Override
+	public ${REQUEST_NAME} getUploadRequestArgs(HttpServletRequest httpRequest, Map<String, FileItem> parametersMap) {
+		${REQUEST_NAME} args = new ${REQUEST_NAME}();
+		// TODO Auto-generated method stub
+		return args;
+	}
+
+	@Override
+	public void writeResponse(HttpServletResponse httpResponse, ${REQUEST_NAME} request, ${RESPONSE_NAME} response){
+		// TODO Auto-generated method stub
+	}
+
+}

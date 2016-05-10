@@ -1,0 +1,19 @@
+package ${BASE_PACKAGE}.client;
+
+import org.akab.engine.client.core.ClientContextProvider;
+
+import com.google.gwt.core.client.EntryPoint;
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class ${APP_NAME} implements EntryPoint {
+
+
+	/**
+	 * This is the entry point method.
+	 */
+	public void onModuleLoad() {
+		//ClientContextProvider.getClientContext().run();
+	}
+}

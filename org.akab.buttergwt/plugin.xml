@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Engine category"
+            id="org.akab.buttergwt.commands.category">
+      </category>
+      <command
+            categoryId="org.akab.buttergwt.commands.category"
+            id="org.akab.buttergwt.commands.new.plugin"
+            name="New plugin">
+      </command>
+      <command
+            categoryId="org.akab.buttergwt.commands.category"
+            id="org.akab.buttergwt.commands.new.presenter"
+            name="New presenter">
+      </command>
+      <command
+            categoryId="org.akab.buttergwt.commands.category"
+            id="org.akab.buttergwt.commands.new.request"
+            name="New request">
+      </command>
+      <command
+            categoryId="org.akab.buttergwt.commands.category"
+            id="org.akab.buttergwt.commands.new.contribution"
+            name="New contribution">
+      </command>
+      <command
+            categoryId="org.akab.buttergwt.commands.category"
+            id="org.akab.buttergwt.commands.new.extension.point"
+            name="New extension point">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.akab.buttergwt.handlers.NewPresenterHandler"
+            commandId="org.akab.buttergwt.commands.new.presenter">
+      </handler>
+      <handler
+            class="org.akab.buttergwt.handlers.NewRequestHandler"
+            commandId="org.akab.buttergwt.commands.new.request">
+      </handler>
+      <handler
+            class="org.akab.buttergwt.handlers.NewContributionHandler"
+            commandId="org.akab.buttergwt.commands.new.contribution">
+      </handler>
+      <handler
+            class="org.akab.buttergwt.handlers.NewPluginHandler"
+            commandId="org.akab.buttergwt.commands.new.plugin">
+      </handler>
+      <handler
+            class="org.akab.buttergwt.handlers.NewExtensionsPointHandler"
+            commandId="org.akab.buttergwt.commands.new.extension.point">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.akab.buttergwt.commands.new.plugin"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+1">
+      </key>
+      <key
+            commandId="org.akab.buttergwt.commands.new.presenter"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+3">
+      </key>
+      <key
+            commandId="org.akab.buttergwt.commands.new.request"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+4">
+      </key>
+      <key
+            commandId="org.akab.buttergwt.commands.new.contribution"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+5">
+      </key>
+      <key
+            commandId="org.akab.buttergwt.commands.new.extension.point"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?after=additions">
+         <menu
+               icon="resources/butter-icon-2.png"
+               id="org.akab.buttergwt.menus.enginemenu"
+               label="Engine"
+               mnemonic="M">
+            <command
+                  commandId="org.akab.buttergwt.commands.new.plugin"
+                  icon="resources/plugin-add-icon.png"
+                  id="org.akab.buttergwt.menus.new.plugin"
+                  mnemonic="J"
+                  tooltip="New plugin">
+            </command>
+            <command
+                  commandId="org.akab.buttergwt.commands.new.presenter"
+                  icon="resources/presenter.png"
+                  id="org.akab.buttergwt.menus.new.presenter"
+                  mnemonic="P"
+                  tooltip="New presenter">
+            </command>
+            <command
+                  commandId="org.akab.buttergwt.commands.new.request"
+                  icon="resources/request.png"
+                  id="org.akab.buttergwt.menus.new.request"
+                  mnemonic="R"
+                  tooltip="New request">
+            </command>
+            <command
+                  commandId="org.akab.buttergwt.commands.new.contribution"
+                  icon="resources/plugin-add-contribution.png"
+                  id="org.akab.buttergwt.menus.new.contribution"
+                  mnemonic="T"
+                  tooltip="New contribution">
+            </command>
+            <command
+                  commandId="org.akab.buttergwt.commands.new.extension.point"
+                  icon="resources/plugin-add-contribution.png"
+                  id="org.akab.buttergwt.menus.new.extension.point"
+                  mnemonic="E"
+                  tooltip="New extension point">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="org.akab.buttergwt.toolbars.engineToolbar">
+            <command
+                  commandId="org.akab.buttergwt.commands.new.plugin"
+                  icon="resources/butter-icon-2.png"
+                  label="Butter-GWT"
+                  style="pulldown">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.akab.buttergwt.commands.new.plugin">
+         <command
+               commandId="org.akab.buttergwt.commands.new.plugin"
+               icon="resources/plugin-add-icon.png"
+               id="org.akab.buttergwt.toolbars.new.plugin"
+               tooltip="New plugin">
+         </command>
+         <command
+               commandId="org.akab.buttergwt.commands.new.presenter"
+               icon="resources/presenter.png"
+               id="org.akab.buttergwt.toolbars.new.presenter"
+               tooltip="New Presenter">
+         </command>
+         <command
+               commandId="org.akab.buttergwt.commands.new.request"
+               icon="resources/request.png"
+               id="org.akab.buttergwt.toolbars.new.request"
+               tooltip="New Requst">
+         </command>
+         <command
+               commandId="org.akab.buttergwt.commands.new.contribution"
+               icon="resources/plugin-add-contribution.png"
+               id="org.akab.buttergwt.toolbars.new.contribution"
+               tooltip="New Contribution">
+         </command>
+         <command
+               commandId="org.akab.buttergwt.commands.new.extension.point"
+               icon="resources/plugin-add-contribution.png"
+               id="org.akab.buttergwt.toolbars.new.extension.point"
+               tooltip="New Extension point">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         id="org.akab.buttergwt.enginenature.image"
+         name="Engine nature"
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="resources/butter-icon-2.png"
+            id="org.akab.buttergwt.enginenature.nature.image"
+            natureId="org.akab.buttergwt.enginenature">
+      </image>
+   </extension>
+   <extension
+         id="org.akab.buttergwt.enginenature"
+         name="Engine nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="org.akab.buttergwt.EngineNature">
+         </run>
+      </runtime>
+   </extension>
+
+</plugin>

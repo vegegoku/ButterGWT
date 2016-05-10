@@ -1,0 +1,14 @@
+package ${PACKAGE}.shared.api.response;
+
+import org.akab.engine.core.shared.api.response.Response;
+
+public class ${RESPONSE_NAME} extends Response {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+    public ${RESPONSE_NAME}() {
+    }
+}

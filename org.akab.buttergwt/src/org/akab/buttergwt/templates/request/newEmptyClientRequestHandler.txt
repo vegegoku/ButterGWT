@@ -1,0 +1,19 @@
+package ${PACKAGE}.client.impl.request;
+
+import org.akab.engine.core.client.api.request.BaseRequest;
+import org.akab.engine.core.client.api.request.handler.ClientHandler;
+import org.akab.engine.core.shared.api.request.EmptyRequestArgs;
+
+import ${PRESENTER_IMPORT};
+
+
+public class ${NAME}ClientRequestHandler extends ClientHandler<EmptyRequestArgs, ${PRESENTER_NAME}> {
+
+	@Override
+	public void handleRequest(BaseRequest<EmptyRequestArgs, ${PRESENTER_NAME}> request, ${PRESENTER_NAME} presenter) {
+		
+		//TODO start handling the request. 
+		
+	}
+
+}

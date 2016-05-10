@@ -1,0 +1,39 @@
+package ${PACKAGE}.client.impl.mvp.controller;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.client.api.event.ControllerEventInitializer;
+import org.akab.engine.core.client.api.mvp.Controller;
+import org.akab.engine.core.client.api.mvp.controller.HistoryBaseController;
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.impl.evnets.${NAME}ControllerEvent;
+import ${PACKAGE}.client.impl.events.Events;
+
+import com.google.gwt.user.client.History;
+
+@Controller${PRIORITY}
+public class ${NAME}Controller extends HistoryBaseController {
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+
+    public ${NAME}Controller() {
+		super(Events.${NAME_CONSTANT}_CONTROLLER_EVENT_TYPE);
+		History.addValueChangeHandler(this);
+    }
+    
+    @Override
+    public ControllerEventInitializer<${NAME}ControllerEvent> getNewControllerEventInitializerInstance() {
+		return new ControllerEventInitializer<${NAME}ControllerEvent>(new ${NAME}ControllerEvent());
+    }
+
+    @Override
+    public String getDescription() {
+		return "[History Controller] ${DESCRIPTION}";
+    }
+
+    @Override
+    public void onApplicationStarted() {
+    }
+
+}

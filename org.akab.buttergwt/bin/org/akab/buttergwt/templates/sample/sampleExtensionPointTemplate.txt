@@ -1,0 +1,25 @@
+package ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.presenter.welcome;
+
+import ${BASE_PACKAGE}.client.${SUB_PACKAGE}.mvp.view.welcome.WelcomePanelView;
+import org.akab.engine.client.core.contribution.ExtensionPoint;
+
+
+public class WelcomeExtensionPoint implements ExtensionPoint<WelcomeContributionContext>  {
+
+	private WelcomeContributionContext contributionContext;
+	
+	public WelcomeExtensionPoint(WelcomePanelView view) {
+		this.contributionContext=new WelcomeContributionContext(view);
+	}
+	
+	@Override
+	public WelcomeContributionContext getContext() {
+		return contributionContext;
+	}
+	
+    public String getDescription() {
+		return "WelcomePresenter default Extension point";
+    }
+
+}
+

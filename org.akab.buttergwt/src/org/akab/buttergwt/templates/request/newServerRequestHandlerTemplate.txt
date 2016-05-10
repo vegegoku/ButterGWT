@@ -1,0 +1,21 @@
+package ${PACKAGE}.client.impl.request;
+
+import org.akab.engine.core.client.api.request.BaseRequest;
+import org.akab.engine.core.client.api.request.handler.ServerResponseHandler;
+
+import ${PRESENTER_IMPORT};
+import ${REQUEST_IMPORT};
+import ${RESPONSE_IMPORT};
+
+public class  ${NAME}ServerResponseHandler extends ServerResponseHandler<${REQUEST_NAME}, ${RESPONSE_NAME}, ${PRESENTER_NAME}> {
+
+	@Override
+	public void handleResponse(BaseRequest<${REQUEST_NAME}, ${PRESENTER_NAME}> request, ${RESPONSE_NAME} response, ${PRESENTER_NAME} presenter) {
+		
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+

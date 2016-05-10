@@ -1,0 +1,27 @@
+package ${PACKAGE}.server.impl.request.handler;
+
+import org.akab.engine.core.server.api.request.handler.ServerRequestHandler;
+import org.akab.engine.core.shared.api.Constants;
+
+import ${REQUEST_IMPORT};
+import ${RESPONSE_IMPORT};
+
+import org.apache.aries.blueprint.annotation.Bean;
+import org.apache.aries.blueprint.annotation.Service;
+import org.apache.aries.blueprint.annotation.ServiceProperty;
+
+@Bean(id ="${PACKAGE}.client.impl.request.handler.${NAME}ServerHandler")
+@Service(interfaces = ServerRequestHandler.class, serviceProperties = { @ServiceProperty(key = Constants.REQUEST_KEY, value = "${PACKAGE}.client.impl.request.${NAME}ServerRequest") })
+public class ${NAME}ServerHanlder implements ServerRequestHandler<${REQUEST_NAME}, ${RESPONSE_NAME}> {
+
+    @Override
+    public ${RESPONSE_NAME} handleRequest(${REQUEST_NAME} request) throws Exception {
+    	
+    	${RESPONSE_NAME} response=new ${RESPONSE_NAME}();
+		
+		// TODO Auto-generated method stub
+		
+		return response;
+    }
+
+}

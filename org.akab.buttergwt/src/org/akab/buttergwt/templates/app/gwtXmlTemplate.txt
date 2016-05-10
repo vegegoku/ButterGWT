@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.6.0//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.6.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='${appModule}'>
+
+  	<inherits name='com.google.gwt.user.User'/>
+
+
+  	<entry-point class='${BASE_PACKAGE}.client.${appName}'/>
+
+  	<source path='client'/>
+  	<source path='shared'/>
+
+  	<add-linker name="xsiframe"/>
+
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="com.google.gwt.inject.Inject" />
+	<inherits name="com.google.gwt.xml.XML" />
+
+</module>

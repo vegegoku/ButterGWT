@@ -1,0 +1,14 @@
+package ${PACKAGE}.client.impl.request;
+
+import ${PRESENTER_IMPORT};
+import ${PRESENTER_CLASS_IMPORT};
+import org.akab.engine.core.client.api.request.EmptyClientRequest;
+import org.akab.engine.core.client.api.request.Request;
+
+@Request(presenterClass=${PRESENTER_CLASS_NAME}.class)
+public class ${NAME}ClientRequest extends EmptyClientRequest<${PRESENTER_NAME}> {
+
+    public ${NAME}ClientRequest() {
+		super(new ${NAME}ClientRequestHandler());
+    }
+}

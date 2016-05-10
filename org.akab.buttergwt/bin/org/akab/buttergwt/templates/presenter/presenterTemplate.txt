@@ -1,0 +1,40 @@
+package ${PACKAGE}.client.impl.mvp.presenter;
+
+import java.util.logging.Logger;
+
+import org.akab.engine.core.client.api.mvp.Presenter;
+import org.akab.engine.core.client.api.mvp.presenter.BasePresenter;
+import org.akab.engine.core.shared.api.logger.CoreLoggerfactory;
+
+import ${PACKAGE}.client.api.mvp.view.${NAME}View;
+import ${PACKAGE}.client.api.mvp.presenter.${NAME}ViewPresenter;
+import ${PACKAGE}.client.impl.mvp.view.${NAME};
+
+import ${CONTROLLER_IMPORT};
+
+
+@Presenter(controllerClass = ${CONTROLLER_CLASS}.class)
+public class ${NAME}Presenter extends BasePresenter<${NAME}View> implements ${NAME}ViewPresenter{
+
+	private final static Logger LOGGER=CoreLoggerfactory.createLogger();
+
+    @Override
+    protected ${NAME}View createViewInstance() {
+		return ${NAME}.create();
+    }
+
+    @Override
+    protected void initialize(final ${NAME}View view) {
+		// TODO Auto-generated method stub
+    }
+    
+    @Override
+    public String getDescription() {
+		return "[Presenter] ${DESCRIPTION}";
+    }
+    
+    @Override
+    protected void registerExtensionPoints() {
+    }
+    
+}

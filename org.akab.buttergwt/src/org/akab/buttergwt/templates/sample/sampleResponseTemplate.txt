@@ -1,0 +1,25 @@
+package ${BASE_PACKAGE}.shared.${SUB_PACKAGE}.response.welcome;
+
+import org.akab.engine.model.shared.response.Response;
+
+public class SayHelloResponse extends Response {
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1L;
+	
+	private String welcomeMessage;
+
+	public SayHelloResponse() {
+    }
+
+	public String getWelcomeMessage() {
+		return welcomeMessage;
+	}
+
+	public void setWelcomeMessage(String welcomeMessage) {
+		this.welcomeMessage = welcomeMessage;
+	}
+	
+}
